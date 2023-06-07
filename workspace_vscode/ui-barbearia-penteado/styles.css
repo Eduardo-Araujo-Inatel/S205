@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+img {
+    width: 60vw;
+    margin: 1vw;
+}
+
+.apresentacao_principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw;
+    background: whitesmoke;
+}
+
+.apresentacao__beneficios {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 2vw;
+    background: beige;
+}
+
+footer {
+    padding: 10vh;
+    align-items: center;
+    font-size: 80%;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {}
+
+strong em {
+    color: red;
+}
+
+#missao {
+    font-size: 20px;
+}
+
+.item {
+    font-style: italic;
+}
+
