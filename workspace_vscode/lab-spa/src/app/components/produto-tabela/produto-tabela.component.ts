@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProdutoDTO } from 'src/app/dtos/produto.dto';
+import { AlertService } from 'src/app/services/alert.service';
 import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
@@ -8,5 +10,21 @@ import { ProdutoService } from 'src/app/services/produto.service';
 })
 
 export class ProdutoTabelaComponent {
-  constructor(private service: ProdutoService) { }
+  produtos: ProdutoDTO[] = [];
+  constructor(
+    private produtoService: ProdutoService,
+    private alertService: AlertService
+  ) {
+    this.produtoService.findAll().subscribe({
+      next: (data) => {
+        this.produtos = data;
+      },
+      error: (e) => {
+        let tit = 'Erro buscando produto';
+        let msg = e.message;
+        this.alertService.error(tit, msg);
+        console.error(e);
+      }
+    });
+  }
 }

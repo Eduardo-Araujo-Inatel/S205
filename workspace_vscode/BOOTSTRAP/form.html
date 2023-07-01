@@ -14,7 +14,10 @@
     <form class="has-validated">
         <div class="mt-3 mb-3">
             <label for="inNome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="inNome" name="inNome" placeholder="Entre com seu nome" required>
+            <input type="text" class="form-control" id="inNome" name="inNome" placeholder="Nome" required>
+
+            <div class="valid-feedback">Validado</div>
+            <div class="invalid-feedback">Favor preencher este campo</div>
         </div>
 
         <div class="mt-3">
@@ -26,7 +29,7 @@
                 <label class="form-label">Estado Civil</label>
                      
                 <div class="form-check">
-                    <input class="form-check-input" id="inEC1" name="inEC" type="radio" value="solteiro">
+                    <input class="form-check-input" id="inEC1" name="inEC" type="radio" value="solteiro" required>
                     <label class="form-check-label" for="inEC1">Solteiro</label>
                 </div>
                 <div class="form-check">
@@ -54,6 +57,22 @@
                       <input class="form-check-input" id="inHab3" name="inHab3" type="checkbox" value="js">
                       <label class="form-check-label" for="inHab3">JavaScript</label>
                 </div>
+            </div>
+
+            <div class="mt-3">
+                <label class="form-label" for="inEscolaridade">Escolaridade</label>
+
+                <select class="form-select" name="inEscolaridade" id="inEscolaridade" placeholder="Selecione" required>
+                    <option value="">--selecione--</option>
+                    <option value="ensino-medio">Ensino Médio</option>
+                    <option value="superior">Superior</option>
+                    <option value="pos-graduacao">Pós-Graduação</option>
+                    <option value="mestrado">Mestrado</option>
+                    <option value="doutorado">Doutorado</option>
+                </select>
+                <div class="valid-feedback">Validado</div>
+                <div class="invalid-feedback">Favor selecionar uma opção</div>
+
             </div>
 
             <div class="mt-5">

@@ -1,1 +1,29 @@
-<p>produto-tabela works!</p>
+<p-table [value]="produtos">
+  <ng-template pTemplate="caption">
+    <div class="flex align-items-center justify-content-center font-bold text-3xl p-2 m-2">
+      Tabela de Produtos
+    </div>
+  </ng-template>
+</p-table>
+
+<p-table [value]="produtos">
+  <ng-template pTemplate="header">
+    <tr>
+      <td>ID</td>
+      <td>Descrição</td>
+      <td>Preço</td>
+      <td>ação</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-p>
+    <tr>
+      <td> {{p.id}} </td>
+      <td> {{p.descricao}} </td>
+      <td> {{p.preco}} </td>
+      <td>
+        <p-button styleClass="p-button-rounded" icon="pi pi-pencil" label="Editar"></p-button>
+      </td>
+
+    </tr>
+  </ng-template>
+</p-table>
